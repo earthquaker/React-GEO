@@ -25,7 +25,7 @@ export default class App extends Component {
     return (
         <div>
 
-          <AppBar style={{backgroundColor:'#000'}} title="bloomdo" iconClassNameRight="muidocs-icon-navigation-expand-more" />
+          <AppBar style={{backgroundColor:'#FFF'}} titleStyle={{color:'#36AFC3'}} title="bloomdo" iconClassNameRight="muidocs-icon-navigation-expand-more" />
 
           <Grid>
           <Row className="show-grid">
