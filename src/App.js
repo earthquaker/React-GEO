@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Geosuggest from 'react-geosuggest';
-import AppBar from 'material-ui/lib/app-bar';
+import { AppBar, List, Divider } from 'material-ui';
 import RaisedButton from 'material-ui/lib/raised-button';
 import { Grid, Row, Col } from 'react-bootstrap';
 
@@ -25,21 +25,25 @@ export default class App extends Component {
     return (
         <div>
 
-          <AppBar title="My App" iconClassNameRight="muidocs-icon-navigation-expand-more" />
+          <AppBar style={{backgroundColor:'#000'}} title="bloomdo" iconClassNameRight="muidocs-icon-navigation-expand-more" />
 
           <Grid>
           <Row className="show-grid">
-            <Col xs={4} md={4} />
-            <Col xs={4} md={4}>
+            <Col xs={2} md={2} />
+            <Col xs={12} md={6}>
+              <List>
                 <Geosuggest
+                className=""
+                inputClassName=""
                 placeholder="Start typing!"
-                initialValue="Hamburg"
+                initialValue="Narlundavagen 17"
                 fixtures={fixtures}
                 onSuggestSelect={this.onSuggestSelect}
                 location={new google.maps.LatLng(53.558572, 9.9278215)}
                 radius="20" />
+              </List>
              </Col>
-             <Col xs={4} md={4} />
+             <Col xs={2} md={2} />
             </Row>
           </Grid>
 
