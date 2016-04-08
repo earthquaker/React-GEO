@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Geosuggest from 'react-geosuggest';
 import { List } from 'material-ui';
 import { Grid, Row, Col } from 'react-bootstrap';
+import ResultComponent from './ResultComponent';
 
 export default class SearchComponent extends Component {
 
@@ -28,15 +29,11 @@ export default class SearchComponent extends Component {
             {label: 'Alster, Hamburg', location: {lat: 53.5610398, lng: 10.0259135}}
         ];
 
-        let nr = 0;
-        let res = this.state.results.map( result =>
-            <div key={nr++} className="item">{result.long_name}</div>
-        );
-
         return (
             <Grid>
                 <Row className="show-grid">
                     <Col xs={2} md={2} />
+
                     <Col xs={12} md={6}>
                         <List>
                             <Geosuggest
@@ -51,7 +48,10 @@ export default class SearchComponent extends Component {
                             />
                         </List>
                     </Col>
-                    <Col xs={2} md={2}>{res}</Col>
+
+                    <Col xs={2} md={2}>
+                        <ResultComponent className="item" resultProps={this.state.results}/>
+                    </Col>
                 </Row>
             </Grid>
         )
