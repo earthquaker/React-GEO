@@ -8,7 +8,7 @@ export default class HeaderComponent extends Component {
             <AppBar
                 style={{backgroundColor:'#FFF'}}
                 titleStyle={{color:'#36AFC3'}}
-                title="bloomdo"
+                title="flowerapp"
                 iconClassNameRight="muidocs-icon-navigation-expand-more"
             />
         );
